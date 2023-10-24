@@ -1,38 +1,438 @@
-.App {
+* {
+  font-size: 14px !important;
+  max-width:100%;
+}
+
+body, html {
+  background-color: black;
+  color: black;
+}
+
+
+.search-bar {
+  display: flex;
+  margin: 0 auto 20px; 
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 50%;
+  margin-top:.5rem;
+}
+
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 0;
+}
+
+.search-bar button {
+  background: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.weather-card, .favorites-card, .big-card, .big-card-two {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 400px;
+  margin-top: 0;
+  cursor:pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.weather-card h2, .big-card-two h2 {
+  margin: 0;
+}
+
+.weather-card p, .big-card-two p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+.weather-icon, .big-card-two .weather-icon {
+  margin-top: 12px;
+}
+
+#favorite{
+  max-width:200px !important;
+  height:260px;
+}
+
+#weather{
+  width:200px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  width: 700px;
+  height: 100px;
+  margin: 0 auto; 
+  margin-bottom: 3rem;
+}
+
+.row-one {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.row-two{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  width: 700px;
+  height: 150px;
+  margin: 0 auto; 
+  margin-bottom: 3rem;
+}
+
+.card {
+  flex: 1;
+  padding: 15px;
+}
+
+.big-card {
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+.big-card-two {
+  border: 1px solid #ccc;
+  width:1200px !important;
+}
+
+.favorites-card, .weather-card, .big-card, .big-card-two {
+  width: calc(50% - 10px);
+  margin: 0 5px;
+}
+
+.weather-card{
+  height:200px;
+}
+.favorites-card{
+  height:200px !important;
+}
+
+#weather-icon {
+  margin-top: -10%;
+}
+
+.forecast-container {
+  display: flex;
+  overflow-x: auto;
+}
+
+.forecast-day {
+  flex: 0 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.forecast-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.forecast-day {
+  text-align: center;
+  margin: 10px; 
+}
+
+.date {
+  font-style: bold;
+  margin-bottom: 5px;
+}
+
+.weather-icon {
+  margin-bottom: 5px;
+}
+
+.temp {
+  font-size: .9em;
+  font-weight:bolder; 
+}
+
+.favorite.active span {
+  text-decoration: underline;
+  color: red;
+  cursor: pointer;
+  filter: brightness(80%);
+}
+
+.favorite-star {
+  filter: brightness(90%);
+  color: #FFD700;
+}
+
+.row-two .date,
+.row-two .temperature {
+  font-weight: bold;
+  color:red;
+  filter: brightness(80%);
+}
+
+.temperature{
+  color:red;
+}
+
+.row-two .date{
+  font-weight: bold;
+  color:black;
+}
+
+.white-mode .temperature{
+  color:red;
+}
+
+@media screen and (max-width: 768px) {
+  .search-bar {
+    width: 80%;
+  }
+
+  .weather-card, .favorites-card, .big-card, .big-card-two {
+    width: 100%;
+  }
+
+  .row, .row-one, .row-two {
+    width: 100%;
+  }
+
+  .row-two{
+    max-width:100%;
+    margin:0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@media screen and (min-width: 481px) and (max-width:736px) {
+  .row-two{
+    max-width:100%;
+    margin:0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .search-bar {
+    width: 100%;
+  }
+
+  .row-two{
+    max-width:100%;
+    margin:0;
+  }
+ .forecast-day .date, .forecast-day .temperature{
+    font-size: 10px !important;
+  }
+  .forecast-day {
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .forecast-day .date,
+  .forecast-day .temperature {
+    font-size: 12px !important;
+  }
+  body{
+    height:300px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+ .row-two{
+  max-width:88.5%;
+ }
+ .forecast-day {
+  flex: 0 0 calc(25% - 10px);
+  padding: 10px;
+  text-align: center;
+}
+.weather-card, .favorites-card {
+  height: calc(50% - 10px);
+  height: 260px;
+}
+.favorites-card{
+  height:258px !important;
+}
+}
+
+.app.night-mode {
+  filter: brightness(70%);
+  background-color: #000;
+  color: #ccc;
+  margin-bottom:2rem;
+}
+
+.white-mode {
+  background-color: white !important;
+  color: black !important;
+}
+
+.white-mode .card {
+  background-color: #fff;
+  color: black;
+}
+
+.white-mode .search-bar {
+  border: 1px solid black;
+}
+
+.white-mode .favorite.active span {
+  color: red;
+}
+
+.white-mode .favorite-star {
+  color: #FFD700;
+}
+
+.white-mode .big-card,
+.white-mode .big-card-two {
+  border: 1px solid #ccc;
+}
+.white-mode body, .white-mode html {
+  background-color: white !important;
+}
+.white-mode .toggle-buttons button {
+  background-color: #333;
+  color: #ccc;
+}
+
+.white-mode .row,
+.white-mode .row-one,
+.white-mode .row-two,
+.white-mode body {
+  background-color: #fff;
+  color: #000;
+}
+
+
+.white-mode .date,
+.white-mode .temperature {
+  color: red !important;
+}
+
+.white-mode .date {
+  color: black;
+}
+
+
+.date, .temperature{
+  font-size:.6em;
+}
+
+
+.white-mode body,
+.white-mode html,
+.white-mode #root {
+  background-color: #fff !important;
+}
+
+.white-mode .card {
+  background-color: #fff;
+  color: black;
+}
+
+.white-mode .big-card, .white-mode .big-card-two{
+  border:1px solid #000;
+}
+
+
+
+.white-mode .favorite.active span {
+  color: red !important;
+}
+
+.white-mode .favorite-star {
+  color: #FFD700;
+}
+
+
+
+.white-mode .favorite.active {
+  text-decoration: underline;
+  color:#fff;
+}
+
+.white-mode .favorites-card {
+  background-color: #fff;
+  color: #000;
+  border:1px solid #000;
+}
+
+.white-mode .favorite {
+  color: black;
+}
+
+.white-mode .favorites-card h2 {
+  color: black;
+}
+
+.white-mode .favorite-star {
+  color:#FFD700 !important; 
+}
+
+.white-mode .weather-card {
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.white-mode .weather-card h2 span:first-child {
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.white-mode .weather-card p {
+  color: white;
+}
+
+
+
+body, html {
+  background-color: black;
+  color: black;
+  height: 630px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    height: 700px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 481px) and (max-width: 736px) {
+  body {
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  body {
+    height:700px !important;
   }
 }
