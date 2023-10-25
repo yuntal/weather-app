@@ -207,6 +207,24 @@ body, html {
   color:red;
 }
 
+
+
+@media screen and (min-width: 1025px) {
+  body{
+    height:750px !important;
+  }
+}
+
+
+
+@media screen and (min-width: 769px) and (max-width:1024px){
+  body{
+    height:700px !important;
+  }
+}
+
+
+
 @media screen and (max-width: 768px) {
   .search-bar {
     width: 80%;
@@ -223,6 +241,9 @@ body, html {
   .row-two{
     max-width:100%;
     margin:0;
+  }
+  body{
+    height:600px;
   }
 }
 
@@ -254,9 +275,9 @@ body, html {
   .forecast-day .temperature {
     font-size: 12px !important;
   }
-  body{
-    height:300px;
-  }
+ body{
+  height:700px !important;
+ }
 }
 
 @media screen and (max-width: 280px) {
