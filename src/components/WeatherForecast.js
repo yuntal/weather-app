@@ -47,6 +47,7 @@ const WeatherForecast = ({ city }) => {
                   {getWeatherIcon(day.weather[0].icon)}
                 </div>
                 <div className="temperature">
+                  <p className="max"> max</p>
                   {Math.round(day.main.temp_max)} °C
                 </div>
               </div>
