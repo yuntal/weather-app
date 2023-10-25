@@ -2,6 +2,8 @@ import React from 'react';
 import { FaStar, FaRegStar } from 'react-icons/fa';
 
 const WeatherCard = ({ weatherData, getWeatherIcon, city, toggleFavorite, favorites }) => {
+  const temperature = Math.round(weatherData?.main.temp); 
+
   return (
     <div className="card weather-card" id="weather">
       <h2>
@@ -25,7 +27,7 @@ const WeatherCard = ({ weatherData, getWeatherIcon, city, toggleFavorite, favori
           <p style={{ display: 'inline' }}>
             {weatherData.weather[0].description}
           </p>
-          <p>Temperature: {weatherData.main.temp}°C</p>
+          <p>Temperature: {temperature}°C</p> 
           <p>Humidity: {weatherData.main.humidity}%</p>
           <p>Wind Speed: {weatherData.wind.speed} m/s</p>
         </div>
@@ -33,5 +35,4 @@ const WeatherCard = ({ weatherData, getWeatherIcon, city, toggleFavorite, favori
     </div>
   );
 };
-
 export default WeatherCard;
