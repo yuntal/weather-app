@@ -1,11 +1,11 @@
 
-# Portfolio
+# Weather App
 <br> </br>
 
 
 ## Description
 
-This is my official portfolio page. Here I will like to tell you a few words about my self, and show you some of the projects that i've made, and hopefully you will get an over-all idea of how i think and work. 
+A weather forecast app that allows users to search for and add favorite locations, featuring an intuitive design for a personalized experience. I have also included a dark mode function for color blindness, increased customization options, and user comfort.
 
 <br> </br>
 
@@ -42,7 +42,9 @@ npm run start
 
 ### What the app looks like running: 
 
+<img width="1101" alt="Skjermbilde 2024-02-07 kl  14 59 58" src="https://github.com/yuntal/weather-app/assets/57660581/f0e9669d-910b-4477-8583-98bf3ea95e0a">
 
+<img width="1152" alt="Skjermbilde 2024-02-07 kl  15 00 05" src="https://github.com/yuntal/weather-app/assets/57660581/81368502-6530-4833-b5b3-77a66ab373d8">
 
 
 <br> </br>
