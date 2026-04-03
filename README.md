@@ -7,6 +7,8 @@
 
 A weather forecast app that allows users to search for and add favorite locations, featuring an intuitive design for a personalized experience. I have also included a dark mode function for color blindness, increased customization options, and user comfort.
 
+<br>Live link: https://yuntal.github.io/weather-app/ </br>
+
 <br> </br>
 
 ## Built With
